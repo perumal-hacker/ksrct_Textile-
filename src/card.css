@@ -1,0 +1,86 @@
+/* Fire animation */
+@keyframes fireEffect {
+    0% {
+      border-color: orange;
+      box-shadow: 0 0 10px 5px rgba(255, 69, 0, 0.8);
+    }
+    25% {
+      border-color: red;
+      box-shadow: 0 0 20px 10px rgba(255, 69, 0, 0.7);
+    }
+    50% {
+      border-color: yellow;
+      box-shadow: 0 0 30px 15px rgba(255, 255, 0, 0.7);
+    }
+    75% {
+      border-color: orange;
+      box-shadow: 0 0 25px 12px rgba(255, 165, 0, 0.8);
+    }
+    100% {
+      border-color: red;
+      box-shadow: 0 0 20px 10px rgba(255, 69, 0, 0.6);
+    }
+  }
+  
+  /* Profile Card */
+  .profile-card {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    height: 250px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: #f9f9f9;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white;  /* Background for visibility */
+    border: 2px solid #333;  /* Default border */
+    animation: fireEffect 2s infinite;  /* Applying fire animation */
+    position: relative;  /* To ensure fire animation works correctly */
+  }
+  
+  .profile-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-card-photo {
+    flex: 1;
+    background-color: #e0e0e0;
+    overflow: hidden;
+  }
+  
+  .profile-card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-card-details {
+    flex: 1.5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  }
+  
+  .profile-card-details h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .profile-card-details h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .profile-card-details p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  

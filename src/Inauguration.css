@@ -1,0 +1,47 @@
+/* Glowing text effect */
+.glowing-text {
+    animation: glowing 2s infinite;
+  }
+  
+  @keyframes glowing {
+    0% {
+      text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500, 0 0 20px #ff4500;
+    }
+    50% {
+      text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347;
+    }
+    100% {
+      text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500, 0 0 20px #ff4500;
+    }
+  }
+  
+  /* Fire border effect for the card */
+  .fire-border {
+    position: relative;
+  }
+  
+  .fire-border::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ff4500, #ff6347, #ff8c00);
+    z-index: -1;
+    animation: fire 1.5s infinite;
+    border-radius: 10px;
+  }
+  
+  @keyframes fire {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 140, 0, 0.8);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+    }
+  }
+  
